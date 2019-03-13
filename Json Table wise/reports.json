@@ -1,0 +1,76 @@
+{
+		"Cwb5zAdGjYTgq9cTrvHlYO8T9Ll2": {
+			"-L5BPLL1PKHHGCceejxX": {
+				"commentId": "-L5BP5FFC_A4NgsnCMAY",
+				"objectId": "-L4hxDk9hJcj62jfjNtq",
+				"reason": "It's annoying.",
+				"receiverId": "1pnkKk1fJKPxdXTwZNj7bM7mUhk1",
+				"reportedType": "Place Comment",
+				"senderId": "Cwb5zAdGjYTgq9cTrvHlYO8T9Ll2"
+			},
+			"-L5kQsBDsn4J0lEVL0KP": {
+				"objectId": "-L4hxDk9hJcj62jfjNtq",
+				"reason": "It's spam.",
+				"receiverId": "Cwb5zAdGjYTgq9cTrvHlYO8T9Ll2",
+				"reportedType": "Post",
+				"reviewId": "-L5kCzspdjA5nLBsHNKb",
+				"senderId": "Cwb5zAdGjYTgq9cTrvHlYO8T9Ll2"
+			},
+			"-L5kRkw060EacZrhBPRM": {
+				"objectId": "-L4hxDk9hJcj62jfjNtq",
+				"reason": "It's personally offensive.",
+				"receiverId": "Cwb5zAdGjYTgq9cTrvHlYO8T9Ll2",
+				"reportedType": "Place Review",
+				"reviewId": "-3",
+				"senderId": "Cwb5zAdGjYTgq9cTrvHlYO8T9Ll2"
+			}
+		},
+		"e1VZpGVMEKZ8B9C6ZGsgygmSMNJ2": {
+			"-LJKLmgNW201M29TRBHj": {
+				"objectId": "-LJGRfA4JTZNJG1154BS",
+				"reason": "It's pornographic.",
+				"receiverId": "lFegBurakXQ8qQfXAPocA4NtJMI3",
+				"reportedType": "Post",
+				"senderId": "e1VZpGVMEKZ8B9C6ZGsgygmSMNJ2"
+			}
+		},
+		"ig9MWzSpMrbWv0RLgB21v70e0R03": {
+			"-LRkojjDdF1iSl5ToFQK": {
+				"objectId": "-LRiF--7JAkjjReurxzQ",
+				"reason": "It goes against my views.",
+				"receiverId": "lFegBurakXQ8qQfXAPocA4NtJMI3",
+				"reportedType": "Post",
+				"senderId": "ig9MWzSpMrbWv0RLgB21v70e0R03"
+			},
+			"-LRuS49VqzKbiUIquFax": {
+				"reason": "This used to be my profile but I no longer have access.",
+				"receiverId": "60sNycM9kBZRN9Xsx1RwcsiupwY2",
+				"reportedType": "User",
+				"senderId": "ig9MWzSpMrbWv0RLgB21v70e0R03"
+			},
+			"-LUF38GxxTLmEhMeuj-0": {
+				"objectId": "-LEH4qb-AV6WR4qsBUuU",
+				"reason": "It's annoying.",
+				"receiverId": "y4RoAkZLJoVNPbynyrOOkEQQhvb2",
+				"reportedType": "Post",
+				"senderId": "ig9MWzSpMrbWv0RLgB21v70e0R03"
+			},
+			"-LUF3HY2R2QSNNAQ-hmu": {
+				"objectId": "-LEH4qb-AV6WR4qsBUuU",
+				"reason": "It's pornographic.",
+				"receiverId": "y4RoAkZLJoVNPbynyrOOkEQQhvb2",
+				"reportedType": "Post",
+				"senderId": "ig9MWzSpMrbWv0RLgB21v70e0R03"
+			}
+		},
+		"60sNycM9kBZRN9Xsx1RwcsiupwY2": {
+			"-LRtnW54dFQ28Y_3bEmy": {
+				"commentId": "-LRqVWgi3lfb5bhi1AXj",
+				"objectId": "-LRK_f5h0Z_z6VETwEdd",
+				"reason": "It goes against my views.",
+				"receiverId": "ig9MWzSpMrbWv0RLgB21v70e0R03",
+				"reportedType": "Place Comment",
+				"senderId": "60sNycM9kBZRN9Xsx1RwcsiupwY2"
+			}
+		}
+}
