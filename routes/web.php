@@ -18,6 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/testlist', 'TestController@testlist')->name('testlist');
 /*Route::get('/userConvert', 'HomeController@userConvert')->name('dbconvertdata');
 Route::get('/FollowingConvert', 'FollowingController@FollowingConvert')->name('FollowingConvert');
 Route::get('/followersConvert', 'FollowingController@followersConvert')->name('followersConvert');
@@ -69,4 +70,5 @@ Route::prefix('admin')->group(function() {
 	Route::any('/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
 
 	Route::get('/customer', 'AdminController@customer_list')->name('admin.customer.list');
+	Route::get('/postlist', 'AdminController@postlist')->name('admin.post.list');
 });
