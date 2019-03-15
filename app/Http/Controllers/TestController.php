@@ -1154,6 +1154,24 @@ class TestController extends Controller
       echo 'Imported Successfully';
     }
 
+    public function testlist()
+    {
+        $f=array();
+        $abc = UserFirebase::with('followers')->with('followings')->where('id',2)->get();
+        foreach ($abc as $value) 
+        {
+            //echo "<pre>"; print_r($value['followers']);
+          foreach ($value['followers'] as $value2) {
+              //echo "<pre>"; print_r($value2['follower_uid']);
+            $user = UserFirebase::where('id','=',$value2['follower_uid'])->first();
+            $value2->name = $user->username;
+            $ab[]= $value2;
+          }
+        }
+         echo "<pre>"; print_r($ab);
+         
+    }
+
     
 
 
