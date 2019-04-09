@@ -1171,6 +1171,41 @@ class TestController extends Controller
          echo "<pre>"; print_r($ab);
          
     }
+    
+    public function img_move_s3()
+    {
+       $data=\DB::table('post_attachment')->where('upload_s3',0)->take(300)->get();
+       
+       foreach($data as $datas)
+       {
+         $upload_s3_file_path='post/';
+         $image=env('APP_URL').'/public/storage/posts_optim/'.$datas->post_pic;
+                 
+         if(env('S3_BUCKET')!="")
+         {
+            $s3 = \Storage::disk('s3');
+            
+            if($s3->exists($upload_s3_file_path.'/'.$datas->post_pic))
+            {
+                $imageName = $upload_s3_file_path."/".$datas->post_pic;
+            }
+            else
+            {
+                $imageName = $upload_s3_file_path."/".$datas->post_pic; //'doc.jpg';
+                $s3->put($imageName, file_get_contents($image));
+                $s3->setVisibility($imageName, 'public');
+            }
+         }
+         $find_id = PostAttachment::find($datas->id);
+         $find_id->upload_s3 = 1;
+         $find_id->save();
+       }
+       echo "<br>".env('APP_URL');
+       echo "<br>".env('STORAGE_URL');
+       echo "<pre>";
+       print_r($data);
+       exit;
+     }
 
     
 
