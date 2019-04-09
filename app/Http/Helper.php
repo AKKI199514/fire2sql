@@ -116,3 +116,38 @@ function formatCurrency($input)
 
     return ($input > 0 ? floor($input * 1000) / 1000 : ceil($input * 1000) / 1000) . $suffixes[$suffixIndex];
 }
+
+function image_upload($upload_path,$file)
+{
+    $key="photo";
+    $ext = $file->getClientOriginalExtension();
+    $file_name_s3 = $key . '_' . rand(1, 1000000) . '.' .$ext;
+    $source_url = $file;
+    $destination_url = public_path().'/storage/'.$upload_path.$file_name_s3;
+    $quality = 20;
+    $info = getimagesize($source_url);
+    if ($info['mime'] == 'image/jpeg')
+        $image = imagecreatefromjpeg($source_url);
+
+    elseif ($info['mime'] == 'image/gif')
+        $image = imagecreatefromgif($source_url);
+
+    elseif ($info['mime'] == 'image/png')
+        $image = imagecreatefrompng($source_url);
+
+    imagejpeg($image, $destination_url, $quality);
+    
+    if(env('S3_BUCKET')!="")
+    {
+        $s3 = \Storage::disk('s3');
+        $imageName = $upload_path.$file_name_s3; 
+        $s3->put($imageName, file_get_contents($destination_url), 'public');
+        $file_s3_name = $file_name_s3;
+        \File::delete($destination_url);
+    }
+    else
+    {
+        $file_s3_name = $file_name_s3;
+    }
+    return $file_s3_name;
+}
